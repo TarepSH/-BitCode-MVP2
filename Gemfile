@@ -2,15 +2,18 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
 
+gem 'bootstrap-sass', '~> 3.3.3'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+# gem 'sass-rails', '>= 3.2'
 gem 'sass-rails', '~> 5.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks' # makes following links in your web application faster
 gem 'unicorn' # Use Unicorn as the app server
+
 
 group :doc do
 	gem 'sdoc', '~> 0.4.0' # bundle exec rake doc:rails generates the API under doc/api.
