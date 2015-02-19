@@ -1,5 +1,5 @@
 class ChallengesController < ApplicationController
-  before_action :set_challenge, only: [:show, :edit, :update, :destroy]
+  before_action :set_challenge, only: [:show, :edit, :update, :destroy, :attempt]
 
   # GET /challenges
   # GET /challenges.json
@@ -58,6 +58,18 @@ class ChallengesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to challenges_url, notice: 'Challenge was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  # POST /challenges/1/attempt
+  def attempt
+    if params[:challenge][:attempt] == @challenge.solution
+      current_user.steps << Step.new(challenge_id: @challenge.id)
+      current_user.score += @challenge.points
+      current_user.save!
+      redirect_to :back, notice: 'Congrates!'
+    else
+      redirect_to :back, notice: 'Please try again!'
     end
   end
 

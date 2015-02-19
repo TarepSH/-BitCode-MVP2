@@ -15,10 +15,13 @@
   <%= @challenge.points %>
 </p>
 
-<%= form_for @challenge do |f| %>
+<%= form_for @challenge, url: url_for(controller: 'challenges', action: 'attempt'), method: :post do |f| %>
   <div class="field">
     <%= f.label :precode %><br>
-    <%= f.text_area :precode %>
+    <%= f.text_area :precode, name: 'challenge[attempt]' %>
+  </div>
+  <div class="actions">
+    <%= f.submit value: 'Submit' %>
   </div>
 <% end %>
 
