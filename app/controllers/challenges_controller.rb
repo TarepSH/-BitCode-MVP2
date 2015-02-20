@@ -37,6 +37,8 @@ class ChallengesController < ApplicationController
     end
   end
 
+  
+
   # PATCH/PUT /challenges/1
   # PATCH/PUT /challenges/1.json
   def update
