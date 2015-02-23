@@ -22,8 +22,42 @@
 
 body {
   font-family: 'Droid Arabic Kufi', serif;
+  direction: rtl;
+
 
 }
 .navbar {
   margin-bottom: -20px;
 }
+
+
+.footer-zindex {
+background-color: #3D4141;
+padding-top: 15px;
+color: #a5a6a7;
+position:relative;
+z-index: 1030;
+}
+
+.footer-list li a {
+padding: 5px;
+color: #a5a6a7;
+font-size: 12px;
+}
+
+.footer-list ul {
+list-style-type:none;
+}
+
+.footer-text p {
+padding-top: 10px;
+color: #a5a6a7;
+font-size: 12px;
+direction: rtl;
+
+}
+
+.footer-text-copy {
+color: #a5a6a7;
+font-size: 12px;
+ }
