@@ -1,73 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Bitcode</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-  <!-- NavBar -->
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to "BitCode", root_path, :class => "navbar-brand" %>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <% if current_user %>
-      <li class="navbar-text">  <%= current_user.name %> || <%= current_user.score %> point </li>
-      <li>  <%= link_to "Sign out", destroy_user_session_path(resource_name), method: :delete %></li>
-      <li>  <%= link_to "Challenge", challenges_path %></li>
-      <% else %>
-      <li>  <%= link_to "Log in", new_session_path(resource_name) %></li>
-      <li>  <%= link_to "Sign up", new_registration_path(resource_name) %></li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
-  <p class="notice"><%= notice %></p>
-
-      <%= yield %>
-
-      <div class="row">
-    </div>
-
-      <div class="container-fluid footer-zindex">
-            <div class=" col-md-3 text-left footer-text text-right">
-                <p>
-                  BitCode هي منصة إلكترونية لتعلم برمجة تطبيقات الويب وتطيبقات الهواتف الذكية بطريقة تفاعلية وباللغة العربية.
-                </p>
-                <h6>:Powered By</h6>
-                <a href="#">
-                    <img alt="Game Power 7 logo" src="/assets/GP7.png" class="text-right">
-                </a>
-            </div>
-
-            <div class="col-md-3"></div>
-
-            <div class="col-md-6 text-right footer-list">
-            <br>
-
-                <ul>
-                    <li><a href="#">التحديات</a></li>
-                    <li><a href="#">المدونة</a></li>
-                    <li><a href="#">عن الموقع</a></li>
-                    <li><a href="#">اتصل بنا</a></li>
-                </ul>
-            </div>
-
-            <div class=" col-xs-12 text-center footer-text-copy">
-                <p>BitCode Made withe love in Rouby on Rails &amp; bootstrap - Syrian Product - copyright reversed for BitCode © 2015 </p>
-            </div>
-
-        </div>
-
-</body>
-</html>
+<!DOCTYPE html><html><head>  <title>Bitcode</title>  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>  <%= csrf_meta_tags %></head><body>  <!-- NavBar -->  <nav class="navbar navbar-default">  <div class="container-fluid">    <div class="navbar-header">      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">        <span class="sr-only">Toggle navigation</span>        <span class="icon-bar"></span>        <span class="icon-bar"></span>        <span class="icon-bar"></span>      </button>      <%= link_to "BitCode", root_path, :class => "navbar-brand" %>    </div>    <ul class="nav navbar-nav navbar-right">      <% if current_user %>      <li class="navbar-text">  <%= current_user.name %> || <%= current_user.score %> point </li>      <li>  <%= link_to "Sign out", destroy_user_session_path(resource_name), method: :delete %></li>      <li>  <%= link_to "Challenge", challenges_path %></li>      <% else %>      <li>  <%= link_to "Log in", new_session_path(resource_name) %></li>      <li>  <%= link_to "Sign up", new_registration_path(resource_name) %></li>      <% end %>    </ul>  </div></nav>  <p class="notice"><%= notice %></p>      <%= yield %>      <div class="row">    </div>      <div class="container-fluid footer-zindex">            <div class=" col-md-3 text-left footer-text text-right">                <p>                  BitCode هي منصة إلكترونية لتعلم برمجة تطبيقات الويب وتطيبقات الهواتف الذكية بطريقة تفاعلية وباللغة العربية.                </p>                <h6>:Powered By</h6>                <a href="#">                    <img alt="Game Power 7 logo" src="/assets/GP7.png" class="text-right">                </a>            </div>            <div class="col-md-3"></div>            <div class="col-md-6 text-right footer-list">            <br>                <ul>                    <li><a href="#">التحديات</a></li>                    <li><a href="#">المدونة</a></li>                    <li><a href="#">عن الموقع</a></li>                    <li><a href="#">اتصل بنا</a></li>                </ul>            </div>            <div class=" col-xs-12 text-center footer-text-copy">                <p>BitCode Made withe love in Rouby on Rails &amp; bootstrap - Syrian Product - copyright reversed for BitCode © 2015 </p>            </div>        </div></body></html>

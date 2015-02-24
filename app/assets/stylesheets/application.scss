@@ -14,18 +14,20 @@
 
  // = require_self
 // = require 'pages'
+// = require 'challenges-index'
+
+
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
- @import "scaffolds";
  @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 
 body {
   font-family: 'Droid Arabic Kufi', serif;
   direction: rtl;
-
-
 }
+
+
 .navbar {
   margin-bottom: -20px;
 }

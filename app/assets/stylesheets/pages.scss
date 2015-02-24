@@ -21,11 +21,18 @@
   color: white;
 }
 
-a:visited {
+.caption a:visited {
   color: white;
 
 }
 
 .btn-primary a {
   color: white;
+}
+
+
+.caption p {
+  font-family: 'Droid Arabic Kufi', serif;
+  direction: rtl;
+  line-height: 2;
 }
