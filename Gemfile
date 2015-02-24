@@ -14,6 +14,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'turbolinks' # makes following links in your web application faster
 gem 'unicorn' # Use Unicorn as the app server
 
+#gem 'codemirror-rails'
 
 group :doc do
 	gem 'sdoc', '~> 0.4.0' # bundle exec rake doc:rails generates the API under doc/api.
