@@ -1,35 +1,1 @@
-<div class="container">
-
-
-
-<div class="page-header">
-  <h1>كورس أساسيات الويب - <%= @challenge.title %> </h1>
-  <div id="challenge-point">
-    نقاط التحدي <span class="badge">  <%= @challenge.points %></span>
-  </div>
-
-</div>
-
-
-<p>
-  <strong>نص التحدي:</strong>
-  <br>
-  <br>
-  <%= @challenge.desc %>
-</p>
-
-
-<%= form_for @challenge, url: url_for(controller: 'challenges', action: 'attempt'), method: :post do |f| %>
-  <div class="field">
-    <%= f.label :precode %><br>
-    <%= f.text_area :precode, name: 'challenge[attempt]' %>
-  </div>
-  <div class="actions">
-    <%= f.submit value: 'Submit' %>
-  </div>
-<% end %>
-
-<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
-<%= link_to 'Back', challenges_path %>
-
-</div>
+<div class="container"><div class="page-header">  <h1>كورس أساسيات الويب - <%= @challenge.title %> </h1>  <div id="challenge-point">    نقاط التحدي <span class="badge">  <%= @challenge.points %></span>  </div></div><p>  <strong>نص التحدي:</strong>  <br>  <br>  <%= @challenge.desc %></p><div class="row">  <div class="col-md-6"><div id="editor">function foo(items) {  var x = "All this is syntax highlighted";  return x;}</div><script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script><script>  var editor = ace.edit("editor");  editor.setTheme("ace/theme/textmate");  editor.getSession().setMode("ace/mode/html");</script></div>  <div class="col-md-6">        <%= form_for @challenge, url: url_for(controller: 'challenges', action: 'attempt'), method: :post do |f| %>      <div class="field">        <%= f.label :precode %><br>        <%= f.text_area :precode, name: 'challenge[attempt]' %>      </div>      <div class="actions">        <%= f.submit value: 'Submit' %>      </div>    <% end %>  </div></div><style type="text/css" media="screen">    #editor {        position: static;        height: 400px;        width: 100%;    }</style><br><br><br><%= link_to 'Edit', edit_challenge_path(@challenge) %> |<%= link_to 'Back', challenges_path %></div>
